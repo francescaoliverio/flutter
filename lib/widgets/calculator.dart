@@ -3,6 +3,8 @@
  * 22/09/2026
 */
 
+import 'dart:io';
+
 void main() {
   final String operator = "/";
   final num num1 = 13;
@@ -10,22 +12,22 @@ void main() {
   switch (operator) {
     case "+":
       num sumRes = sum(num1, num2);
-      print("$num1 + $num2 = $sumRes");
+      stdout.write("$num1 + $num2 = $sumRes\n");
     case "-":
       num subRes = sub(num1, num2);
-      print("$num1 - $num2 = $subRes");
+      stdout.write("$num1 - $num2 = $subRes\n");
     case "*":
       num mulRes = mul(num1, num2);
-      print("$num1 * $num2 = $mulRes");
+      stdout.write("$num1 * $num2 = $mulRes\n");
     case "/":
       num? divRes = div(num1, num2);
       if (divRes == null) {
-        print("You can't divide a number by 0.");
+        stdout.write("You can't divide a number by 0.\n");
       } else {
-        print("$num1 / $num2 = $divRes");
+        stdout.write("$num1 / $num2 = $divRes\n");
       }
     default:
-      print("Choose a valid operator.");
+      stdout.write("Choose a valid operator.\n");
   }
 }
 

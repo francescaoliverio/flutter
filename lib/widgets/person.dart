@@ -3,6 +3,8 @@
  * 22/09/2026
 */
 
+import 'dart:io';
+
 void main() {
   var io = Persona("Francesca", "Oliverio", 27, [28, 30, 29, 28]);
   io.hello();
@@ -22,8 +24,6 @@ class Persona {
   }
 
   void hello() {
-    print(
-      "Ciao! Mi chiamo $nome $cognome, ho $eta anni e la mia media è $media",
-    );
+    stdout.write("Ciao! Mi chiamo $nome $cognome, ho $eta anni e la mia media è $media\n");
   }
 }

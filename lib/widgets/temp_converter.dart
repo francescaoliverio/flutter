@@ -3,16 +3,18 @@
  * 22/09/2026
 */
 
+import 'dart:io';
+
 void main() {
   num tempC = 24.5;
   num tempF = 79;
   num? tempCtoF = tempConverter(tempC, "C");
   num? tempFtoC = tempConverter(tempF, "F");
   if (tempCtoF == null || tempFtoC == null) {
-    print("Oops! Something went wrong!");
+    stdout.write("Oops! Something went wrong!\n");
   } else {
-    print("$tempC°C are $tempCtoF°F");
-    print("$tempF°F are $tempFtoC°C");
+    stdout.write("$tempC°C are $tempCtoF°F\n");
+    stdout.write("$tempF°F are $tempFtoC°C\n");
   }
 }
 
