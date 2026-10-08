@@ -43,6 +43,15 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Hello, $name!\nYou are a $info.");
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Hello, $name!",
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        ),
+        Text("You are a $info."),
+      ],
+    );
   }
 }
